@@ -1,5 +1,5 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Roboto";
     background: url("../img/pattern3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,8 +12,10 @@ body {
 }
 
 .carousel-inner img {
-    width: auto;
-    height: auto;
+    width: 15rem;
+    height: 30rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
