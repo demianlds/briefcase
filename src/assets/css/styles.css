@@ -7,8 +7,8 @@ body {
     height: 100%;
 }
 
-.carousel-inner{
- width: 100%;
+.carousel-inner {
+    width: 100%;
 }
 
 .carousel-inner img {
@@ -17,16 +17,6 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
-
-
-/* .demian {
-    display: block;
-    width: 16%;
-    margin-left: auto;
-    margin-right: auto;
-
-} */
 
 .navbar {
     display: block;
@@ -158,4 +148,15 @@ form textarea {
     width: 70%;
     padding: 5px;
     display: block;
+}
+
+.card-flex {
+    display: flex;
+}
+
+.card {
+    display: block;
+    margin: 0px auto;
+    margin-top: 10px;
+
 }

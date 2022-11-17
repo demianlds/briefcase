@@ -1,21 +1,42 @@
 <div class="container">
     <h2>{{title}}</h2>
-    <form>
-        <p>
+    <form [formGroup]="formContacto">
+        <div>
             <label for="email">Email</label>
-            <input type="text" name="email"/>
-        </p>
-        <p>
-            <label for="phone">Telefono</label>
-            <input type="number" name="phone"/>
-        </p>
-        <p>
-            <label for="description">Su mensaje</label>
-            <textarea name="description"></textarea>
-        </p>
+            <input type="text" name="email" formControlName="email"/>
+            <div *ngIf="this.formContacto.controls['email'].invalid && (this.formContacto.controls['email'].dirty || this.formContacto.controls['email'].touched)"
+                style="font-size: 12px; color: rgb(141, 0, 16)">
 
-        <button type="button" class="btn btn-primary">Enviar</button>
+                <div *ngIf="this.formContacto.controls['email'].errors?.['required']">
+                    Campo requerido.
+                </div>
+            </div>
+            <div>
+                <label for="phone">Telefono</label>
+                <input type="number" name="phone" formControlName="phone" />
+                <div *ngIf="this.formContacto.controls['phone'].invalid && (this.formContacto.controls['phone'].dirty || this.formContacto.controls['phone'].touched)"
+                style="font-size: 12px; color: rgb(141, 0, 16)">
+
+                <div *ngIf="this.formContacto.controls['phone'].errors?.['required']">
+                    Campo requerido.
+                </div>
+            </div>
+            </div>
+            <div>
+                <label for="description">Su mensaje</label>
+                <textarea name="description" formControlName="description"></textarea>
+                <div *ngIf="this.formContacto.controls['description'].invalid && (this.formContacto.controls['description'].dirty || this.formContacto.controls['description'].touched)"
+                style="font-size: 12px; color: rgb(141, 0, 16)">
+
+                <div *ngIf="this.formContacto.controls['description'].errors?.['required']">
+                    Campo requerido.
+                </div>
+            </div>
+            </div>
+        </div>
+        <br>
+
+        <button type="button" class="btn btn-primary" onsubmit="sendMail()">Enviar</button>
     </form>
-
 
 </div>

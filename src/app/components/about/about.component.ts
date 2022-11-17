@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit {
   constructor() { 
     this.title="Demian Perez Stragá";
     this.subtitle="Desarrollador web y coordinador en el Ministerio de Educación";
-    this.web="www.demianpstraga.com.ar";
+    this.web="https://briefcase-demian.web.app/";
   }
 
   ngOnInit(): void {
