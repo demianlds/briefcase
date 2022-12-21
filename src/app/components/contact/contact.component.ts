@@ -1,5 +1,8 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, ValidationErrors, ValidatorFn, Validators, FormControl } from '@angular/forms';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { firstValueFrom } from 'rxjs';
+
 
 @Component({
   selector: 'app-contact',
@@ -16,31 +19,38 @@ export class ContactComponent implements OnInit {
     description: new FormControl('', [Validators.required])
   });
 
-  constructor() {
+  constructor(
+    private http: HttpClient
+  ) {
     this.title = "Contacto";
   }
 
   ngOnInit(): void {
   }
 
-  sendMail() {
-    const sgMail = require('@sendgrid/mail')
-    sgMail.setApiKey("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")
-    const msg = {
-      to: 'demian.igi@gmail.com', // Change to your recipient
-      from: 'demian.straga@gmail.com', // Change to your verified sender
-      subject: 'contacto desde el briefcase',
-      text: 'cualquier cosa',
-      html: '<strong>cualquier cosa</strong>',
+  async sendMail() {
+    try {
+
+      const apiUrl: string = "https://formspree.io/f/xdojbrln";
+
+      const formData = new FormData();
+      formData.append('email', this.formContacto.controls['email'].value);
+      formData.append('phone', this.formContacto.controls['phone'].value);
+      formData.append('description', this.formContacto.controls['description'].value);
+
+      const headers = new HttpHeaders({
+        'Accept': 'application/json'
+      });
+
+      await firstValueFrom(this.http.post(apiUrl, formData, { headers: headers }));
+      alert("Mensaje enviado");
+      this.formContacto.reset();
+
+    } catch (e) {
+      console.error(e);
+      alert("Error");
     }
-    sgMail
-      .send(msg)
-      .then(() => {
-       alert('Email sent')
-      })
-      .catch((error:any) => {
-        alert(error)
-      })
   }
+
 
 }

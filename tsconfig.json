@@ -21,11 +21,7 @@
     "lib": [
       "es2020",
       "dom"
-    ],
-    "paths":{
-      "fs":["node_modules/fs"],
-      "path":["node_modules/path"]
-    }
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
