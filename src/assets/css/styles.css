@@ -1,10 +1,18 @@
-body {
-    font-family: "Roboto";
-    background: url("../img/pattern3.jpg");
-    background-repeat: no-repeat;
+#main {
+    font-family: "Merryweather";
+    font-weight:bold;
+    background-image: linear-gradient(to top,white,rgb(219, 194, 48),purple);
     background-size: cover;
     width: 100%;
     height: 100%;
+    animation: colors 20s infinite alternate;
+}
+@keyframes colors {
+    0% {background-position: left}
+    100% {background-position: right}
+}
+.container {
+    color:beige;
 }
 .card-flex {
     margin-top: 30px;
@@ -29,7 +37,6 @@ body {
 .navbar {
     display: block;
     width: 100%;
-    background: rgba(97, 166, 133);
     text-transform: uppercase;
 }
 
@@ -58,7 +65,7 @@ header a {
 
 header a:hover,
 .actived {
-    color: aquamarine;
+    color: rgb(88, 17, 155);
     transition: 0.3ms;
     transform: scale(1.20, 1.20);
 }
@@ -91,7 +98,7 @@ header a:hover,
 footer {
     width: 75%;
     margin: left;
-    padding-top: 25px;
+    padding-top: 50px;
     color: rgba(0, 0, 0, 0.5);
 }
 
@@ -108,6 +115,7 @@ footer {
     font-size: 60px;
     border-bottom: 1px solid black;
     padding-bottom: 5px;
+    color:beige;
 }
 
 .title h2 {
@@ -115,6 +123,7 @@ footer {
     color: black;
     margin-top: 5px;
     margin-bottom: 5px;
+    color:beige;
 }
 
 article.about {
@@ -123,23 +132,27 @@ article.about {
     margin-bottom: 20px;
     font-size: 23px;
     font-family: "finger";
+    color:beige;
 }
 
 .about h2 {
     border-bottom: 1px solid black;
     padding-bottom: 5px;
     margin-bottom: 5px;
+    color:beige;
 }
 
 .about p {
     padding-top: 20px;
     padding-bottom: 30px;
     text-align: justify;
+    color:beige;
 }
 
 form {
     width: 50%;
     margin: 0px auto;
+    color:beige;
 }
 
 form label {
@@ -166,7 +179,6 @@ form textarea {
     display: block;
     margin: 0px auto;
     margin-top: 10px;
-
 }
 
 footer {
@@ -179,6 +191,4 @@ footer {
 .logoFooter {
     display: inline-block;
     width: 50px;
-    filter: brightness(1.1);
-    mix-blend-mode: multiply;
 }
