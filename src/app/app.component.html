@@ -1,16 +1,18 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 <body>
 <div id="main">
   <header>
     <div class="navbar">
       <ul>
-        <li><a [routerLink]="['/portafolio']" [routerLinkActive]="['actived']">Portafolio</a></li>
-        <li><a [routerLink]="['/experiencia']" [routerLinkActive]="['actived']">Experiencia</a></li>
+        <li><a [routerLink]="['/portafolio']" [routerLinkActive]="['actived']" [class.actived]="isActive('/portafolio')">Portafolio</a></li>
+        <li><a [routerLink]="['/experiencia']" [routerLinkActive]="['actived']" [class.actived]="isActive('/experiencia')">Experiencia</a></li>
         <li class="logo"><a href="#">DS</a></li>
-        <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']">Sobre mi</a></li>
-        <li><a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a></li>
+        <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']" [class.actived]="isActive('/sobre-mi')">Sobre mi</a></li>
+        <li><a [routerLink]="['/contacto']" [routerLinkActive]="['actived']" [class.actived]="isActive('/contacto')">Contacto</a></li>
       </ul>
     </div>
-
   </header>
 
 
@@ -20,9 +22,8 @@
 
   <footer>
     Demian Perez Stragá &copy;
-    <a href="https://www.linkedin.com/in/demian-perez-strag%C3%A1-545a50253/" target="_blank"> <img src="../assets/img/linkedin.png"
-    class="logoFooter"> </a>
-    <a href="https://github.com/demianlds?tab=repositories" target="_blank"><img src="../assets/img/github.jpg" class="logoFooter"></a>
+    <a class="logoFooter" href="https://www.linkedin.com/in/demian-perez-strag%C3%A1-545a50253/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+    <a class="logoFooter" href="https://github.com/demianlds?tab=repositories" target="_blank"><i class="fa fa-github"></i></a>
   </footer>
 </div>
 </body>
