@@ -153,6 +153,14 @@ article.about {
     margin-top: 30px;
 }
 
+.demian_cv {
+    width: 75%;
+    width: 75%;
+    display: block;
+    margin: 0 auto; /* Esto centra horizontalmente la imagen dentro del artículo */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+}
+
 form {
     width: 50%;
     margin: 0px auto;

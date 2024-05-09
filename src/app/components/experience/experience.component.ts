@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
   public title:string;
+  public subtitle:string;
 
   constructor() {
-    this.title = "Experiencia";
+    this.title = "CV Perfil Profesional";
+    this.subtitle = "Para descargar mi CV en formato PDF has click"
   }
 
   ngOnInit(): void {
