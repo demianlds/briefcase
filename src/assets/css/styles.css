@@ -214,3 +214,36 @@ footer {
     display: inline-block;
     width: 32px;
 }
+
+@media (max-width: 768px) {
+    footer {
+        margin-left: 50px;
+    }
+    .title h1 {
+        font-size: 28px;
+    }
+    .title h2 {
+        font-size: 16px;
+    }
+
+    article.about {
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .card-flex {
+        display: block;
+    }
+    .card {
+        display: block;
+        margin: 0px auto;
+        margin-top: 10px;
+    }
+}
