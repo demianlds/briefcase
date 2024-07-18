@@ -1,15 +1,18 @@
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="main">
   <header>
     <div class="navbar">
       <ul>
-        <li><a [routerLink]="['/portafolio']" [routerLinkActive]="['actived']" [class.actived]="isActive('/portafolio')">Portafolio</a></li>
+        <li><a [routerLink]="['/portafolio']" [routerLinkActive]="['actived']" [class.actived]="isActive('/portafolio')">Portfolio</a></li>
         <li><a [routerLink]="['/experiencia']" [routerLinkActive]="['actived']" [class.actived]="isActive('/experiencia')">Experiencia</a></li>
-        <li class="logo"><a href="#">DS</a></li>
-        <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']" [class.actived]="isActive('/sobre-mi')">Sobre mi</a></li>
+        <li class="logo">DS</li>
+        <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']" [class.actived]="isActive('/sobre-mi')">Sobre mí</a></li>
         <li><a [routerLink]="['/contacto']" [routerLinkActive]="['actived']" [class.actived]="isActive('/contacto')">Contacto</a></li>
       </ul>
     </div>

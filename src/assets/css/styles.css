@@ -1,5 +1,5 @@
 #main {
-    font-family: "Merryweather";
+    font-family: "Merriweather";
     font-weight:bold;
     /* background-image: linear-gradient(to top,white,rgb(219, 194, 48),purple); */
     background: linear-gradient(to bottom, #1a237e, #64b5f6);
@@ -8,6 +8,7 @@
     height: 100%;
     animation: colors 20s infinite alternate;
 }
+
 @keyframes colors {
     0% {background-position: left}
     100% {background-position: right}
@@ -15,6 +16,7 @@
 
 .briefcase-title {
     text-align: center;
+    color: white;
     font-weight: bold;
 }
 .container {
@@ -24,8 +26,12 @@
     margin-top: 30px;
 }
 
-.card:hover{
+.card:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0,1);
+    transition: all 400ms ease;
+}
+
+.card {
     transition: all 400ms ease;
 }
 
@@ -57,6 +63,7 @@ header ul li {
     display: inline-block;
     text-align: center;
     line-height: 58px;
+    margin: auto 7px;
 }
 
 header a {
@@ -66,13 +73,13 @@ header a {
     height: inherit;
     text-decoration: none;
     color: white;
-    transition: 0.3ms;
+    transition: 500ms;
 }
 
 header a:hover,
 .actived {
     color: rgb(138, 160, 221);
-    transition: 0.3ms;
+    transition: 500ms;
     transform: scale(1.20, 1.20);
 }
 
@@ -85,19 +92,22 @@ header a:hover,
     padding-top: 120px;
 }
 
+#content {
+    padding-top: 37px;
+}
+
 .logo {
     font-family: "finger";
     font-size: 30px;
-
-}
-
-.logo a {
     transition: color 500ms, transform 500ms;
+    color: white;
+    cursor: default;
+    margin: auto 15px;
 }
 
-.logo a:hover {
+.logo:hover {
     background: transparent;
-    color: black;
+    color: rgb(136, 224, 213);
     transform: scale(1.50, 1.50);
 }
 
@@ -105,7 +115,6 @@ header a:hover,
     width: 70%;
     margin: 0px auto;
     text-align: center;
-    margin-top: 20px;
     margin-bottom: 70px;
 }
 
@@ -114,15 +123,18 @@ header a:hover,
     font-size: 60px;
     border-bottom: 1px solid black;
     padding-bottom: 5px;
-    color:black;
+    color: white;
 }
 
 .title h2 {
     font-size: 25px;
-    color: black;
     margin-top: 5px;
     margin-bottom: 5px;
-    color:black;
+    color: white;
+}
+
+h3 {
+    color: white;
 }
 
 article.about {
@@ -131,21 +143,21 @@ article.about {
     margin-bottom: 20px;
     font-size: 23px;
     font-family: "finger";
-    color:black;
+    color: white;
 }
 
 .about h2 {
     border-bottom: 1px solid black;
     padding-bottom: 5px;
     margin-bottom: 5px;
-    color:black;
+    color: white;
 }
 
 .about p {
     padding-top: 20px;
     padding-bottom: 30px;
     text-align: justify;
-    color:black;
+    color: white;
 }
 
 .foto-cv {
@@ -157,18 +169,18 @@ article.about {
     width: 75%;
     width: 75%;
     display: block;
-    margin: 0 auto; /* Esto centra horizontalmente la imagen dentro del artículo */
-    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 form {
     width: 50%;
     margin: 0px auto;
-    color:black;
+    color: white;
 }
 
 .form-title {
-    color: black;
+    color: white;
     font-weight: bold;
 }
 
