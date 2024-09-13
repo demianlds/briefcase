@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { firstValueFrom } from 'rxjs';
 
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -12,28 +11,25 @@ import { firstValueFrom } from 'rxjs';
 export class ContactComponent implements OnInit {
   public title: string;
 
-
   formContacto: FormGroup = new FormGroup({
+    name: new FormControl('', [Validators.required]),  // Añadido campo de Nombre y Apellido
     email: new FormControl('', [Validators.required]),
     phone: new FormControl('', [Validators.required]),
     description: new FormControl('', [Validators.required])
   });
 
-  constructor(
-    private http: HttpClient
-  ) {
+  constructor(private http: HttpClient) {
     this.title = "Contacto";
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   async sendMail() {
     try {
-
       const apiUrl: string = "https://formspree.io/f/xdojbrln";
 
       const formData = new FormData();
+      formData.append('name', this.formContacto.controls['name'].value);  // Añadir el nombre y apellido al envío
       formData.append('email', this.formContacto.controls['email'].value);
       formData.append('phone', this.formContacto.controls['phone'].value);
       formData.append('description', this.formContacto.controls['description'].value);
@@ -51,6 +47,4 @@ export class ContactComponent implements OnInit {
       alert("Error");
     }
   }
-
-
 }
