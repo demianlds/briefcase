@@ -7,7 +7,10 @@
 <body>
 <div id="main">
   <header>
-    <div class="navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarNav" class="navbar-collapse">
       <ul>
         <li><a [routerLink]="['/portafolio']" [routerLinkActive]="['actived']" [class.actived]="isActive('/portafolio')">Portfolio</a></li>
         <li><a [routerLink]="['/experiencia']" [routerLinkActive]="['actived']" [class.actived]="isActive('/experiencia')">Experiencia</a></li>
