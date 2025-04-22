@@ -6,13 +6,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 
 const routes: Routes = [
-  {path:'',component:BriefcaseComponent},
-  {path:'portafolio',component:BriefcaseComponent},
-  {path:'experiencia',component:ExperienceComponent},
-  {path:'sobre-mi',component:AboutComponent},
-  {path:'contacto',component:ContactComponent},
-  {path:'**',component:BriefcaseComponent}
-
+  { path: '', component: BriefcaseComponent},
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
